@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>COLLEGE LIFE</title>
+    <style>
+        img {
+            float: left;
+            max-width: 2000px;
+            height: 600px;
+        }
+
+        html {
+            height: 95%;
+        }
+
+        body {
+            margin: 0px;
+            height: 95%;
+            background-image: url("./images/1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color:black;
+            text-align: center;
+            font-size:35px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            /* background-color: #333; */
+            position: fixed;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #4CAF50;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 30px;
+            padding: 8px 12px;
+                bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <ul>
+        <li><a href="intro.html">Home</a></li>
+        <!-- <li><a href="photos.html">Photos</a></li>n -->
+        <li><a class="active" href="college_life.html">College life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="padding-top:10px;">
+        <h1>Some of the big events which I have been a part in my first year.<br> Hoping to make some more great memories.</h1>
+
+        <div class="slideshow-container" >
+
+            <div class="mySlides fade">
+                <img src="./images/3d1.jpg" style="width:100%">
+                <div class="text">3-D PAINTING</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/3d2.jpg" style="width:100%">
+                <div class="text">BAMBOO SCUPLTURE</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./images/megathon.jpg" style="width:100%">
+                <div class="text">MEGATHON</div>
+            </div>
+            <div class="mySlides fade">
+                    <img src="./images/flashmob.jpg" style="width:100%">
+                    <div class="text">FLASHMOB</div>
+                </div>
+            <div class="mySlides fade">
+                <img src="./images/felicity.jpg" style="width:100%">
+                <div class="text">FELICITY</div>
+            </div>
+        </div>
+        <br>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </div>
+</body>
+
+</html>
