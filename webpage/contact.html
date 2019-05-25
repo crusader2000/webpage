@@ -2,18 +2,42 @@
 
 <head>
     <title>CONTACT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
     <style>
         img {
-            padding-left: 10px;
-            float: left;
-            height: 100px;
-            width: 100px;
-            display: block;
-            align: middle;
+            float: center;
+            height: 90px;
+            width: 90px;
+            /* display: block; */
+            /* align: center; */
         }
 
         html {
             height: 95%;
+        }
+
+        .three-inline-buttons .button {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .three-inline-buttons {
+            display: table;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 960px) {
+
+            .three-inline-buttons .button {
+                width: 100%;
+                margin: 20px;
+                text-align: center;
+            }
+
         }
 
         body {
@@ -23,62 +47,52 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         h1 {
-            color: black;
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0px;
-            /* background-color: #333; */
-            position: fixed;
-            width: 100%;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #4CAF50;
-        }
-
-        .active {
-            background-color: #4CAF50;
         }
     </style>
 </head>
 
 <body>
-    <!-- NAVIGATION BAR -->
-    <ul>
-        <li><a href="intro.html">Home</a></li>
-        <!-- <li><a href="photos.html">Photos</a></li> -->
-        <li><a href="college_life.html">College life</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-    </ul>
-    <div style="padding-top:200px;text-align:justify;line-height: 1.6;">
-        <h1> HOPE YOU LIKED MY PAGE.<br>
-            Let me know what you think of it.<br>
-            You can find me on</h1>
-        <div style="padding-left: 600px;">
-            <a href="mailto:ansh.puvvada@students.iiit.ac.in?subject = Feedback&body = Message"><img src="./images/gmail.png"></a>
-            <a href="https://www.facebook.com/ansh.rao.31"><img src="./images/facebook.png"></a>
-            <a href="https://github.com/crusader2000"><img src="./images/github.jpg"></a>
-        </div>
+    <nav id="nav-toggle" class="navbar navbar-default navbar-inverse">
+        
+            <div class="navbar-header">
+            <font color="white">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        Menu <i class="fa fa-bars"></i>
+                        </button>
+                        </font>
+            </div>
+            <div class="container-fluid navbar-main-collapse collapse navbar-collapse" style="float: right;">
+                <ul class="nav navbar-nav">
+                    <li ><a href="intro.html">HOME</a></li>
+                    <li ><a href="about_me.html">ABOUT ME</a></li>
+                    <li><a href="college_life.html">COLLEGE LIFE</a></li>
+                    <li class="active"><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="container">
+    <div style="padding-top:100px;text-align:justify;line-height: 1.6;">
+        <font size="10" >
+            <h1> HOPE YOU LIKED MY PAGE.<br>
+                Let me know what you think of it.<br>
+                You can find me on</h1>
+        </font>
     </div>
-
+    <div class="three-inline-buttons">
+        <a href="mailto:ansh.puvvada@students.iiit.ac.in?subject = Feedback&body = Message" class="btn btn-lg btn-primary-outline button">
+            <img src="./images/gmail.png" ></a>
+        <a href="https://www.facebook.com/ansh.rao.31" class="btn btn-lg btn-primary-outline button">
+            <img src="./images/facebook.png"></a>
+        <a href="https://github.com/crusader2000" class="btn btn-lg btn-primary-outline button">
+            <img src="./images/github.png" ></a>
+    </div>
+</div>
 </body>
 
 </html>

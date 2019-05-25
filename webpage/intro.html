@@ -2,6 +2,12 @@
 
 <head>
     <title> INTRODUCTION</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
     <style>
         img {
             float: left;
@@ -17,74 +23,57 @@
             background-image: url("./images/1.jpg");
             background-repeat: no-repeat;
             background-position: center;
+            background-color: black;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         h1 {
             color: black;
             text-align: center;
         }
-
-        ul {
-            list-style-type: none;
-            margin: 0px;
-            /* background-color: #333; */
-            position: fixed;
-            width: 100%;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #4CAF50;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
     </style>
 </head>
 
 <body>
-    <!-- NAVIGATION BAR -->
-    <ul>
-        <li><a class="active" href="intro.html">Home</a></li>
-        <!-- <li><a href="photos.html">Photos</a></li> -->
-        <li><a href="college_life.html">College life</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <!-- ABOUT ME -->
-    <div style="padding:120px">
+    <nav id="nav-toggle" class="navbar navbar-default navbar-inverse">
+        <div class="navbar-header">
+            <font color="white">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+            </font>
+        </div>
+        <div class="container-fluid navbar-main-collapse collapse navbar-collapse" style="float: right;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="intro.html">HOME</a></li>
+                <li><a href="about_me.html">ABOUT ME</a></li>
+                <li><a href="college_life.html">COLLEGE LIFE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="padding:120px" class="container-fluid">
         <img src="./images/me.jpg" alt="IMAGE OF ANSH" style="width:500px;height:500px;">
         <h1 style="padding-top:20px;">
-            <!-- MY IMAGE -->
-            HELLO THERE!
-            <p >
-                I am Ansh Puvvada.
-                <br>
-                Welcome to my webpage.
-                <br>
-                Let me give you a brief description about me.
-                <br>
-                I am 18 years old.
-                <br>
-                I am a 2nd year ECE student studying at IIIT -Hyderabad.
-                <br>
-                I enjoy learning about space and I love to swim.
-                <br>
-            </p>
+            <font color="white" size="9">
+                HELLO THERE!
+                <p id="demo"></p>
+            </font>
         </h1>
     </div>
+    <script>
+        var i = 0;
+        var text = "I am Ansh Puvvada. I am studying Electronic and Communication Engineering at IIIT-Hyderabad.";
+        setTimeout(write, 50);
+        function write() {
+            if (i < text.length) {
+                document.getElementById("demo").innerHTML += text[i];
+                i++;
+                setTimeout(write, 50);
+            }
+        }  
+    </script>
 </body>
 
 </html>
